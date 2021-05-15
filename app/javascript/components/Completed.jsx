@@ -6,9 +6,9 @@ const Completed = ({ completed }) => {
       <h4>Completed</h4>
       {completed.map((todo, i) => {
         return (
-          <div class="form-check" key={i}>
-            <input class="form-check-input" type="checkbox" checked={todo.completed} value="" id={`checkbox${todo.id}`} disabled />
-            <label class="form-check-label" for={`checkbox${todo.id}`}>
+          <div className="form-check" key={i}>
+            <input className="form-check-input" type="checkbox" checked={todo.completed} id={`checkbox${todo.id}`} disabled />
+            <label className="form-check-label" htmlFor={`checkbox${todo.id}`}>
               {todo.title}
             </label>
           </div>

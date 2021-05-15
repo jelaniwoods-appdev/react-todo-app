@@ -3,7 +3,7 @@ class TodosController < ApplicationController
   end
   def all_todos
     completed = Todo.where(completed: true)
-    uncompleted = Todo.where(completed: false)
-    render json: { completed: completed, uncompleted: uncompleted }
+    pending = Todo.where(completed: false)
+    render json: { completed: completed, pending: pending }
   end
 end
